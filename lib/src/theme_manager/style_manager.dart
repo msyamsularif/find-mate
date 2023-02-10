@@ -64,3 +64,15 @@ TextStyle getBlackTextStyle({
     color: ColorManager.black,
   );
 }
+
+TextStyle getGrey60TextStyle({
+  double fontSize = FontSizeManager.f14,
+  FontWeight fontWeight = FontWeightManager.regular,
+}) {
+  return _getTextStyle(
+    fontSize: fontSize,
+    fontFamily: FontFamilyConstant.fontFamily,
+    fontWeight: fontWeight,
+    color: ColorManager.grey60,
+  );
+}

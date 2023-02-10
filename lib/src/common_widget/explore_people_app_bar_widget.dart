@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sarang_app/src/common_widget/logo_widget.dart';
+import 'package:sarang_app/src/features/likes_you/presentation/people_love_screen.dart';
 import 'package:sarang_app/src/theme_manager/asset_image_icon_manager.dart';
 
 class ExplorePeopleAppBarWidget extends StatelessWidget {
@@ -24,13 +25,18 @@ class ExplorePeopleAppBarWidget extends StatelessWidget {
           ),
         ),
         const LogoWidget(),
-        Container(
-          width: 24,
-          height: 24,
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage(
-                '${AssetImageIconManager.assetPath}/icon_notification.png',
+        GestureDetector(
+          onTap: () {
+            Navigator.pushNamed(context, PeopleLoveScreen.routeName);
+          },
+          child: Container(
+            width: 24,
+            height: 24,
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(
+                  '${AssetImageIconManager.assetPath}/icon_notification.png',
+                ),
               ),
             ),
           ),
